@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+    <listeners>
+       <listener class-name="common.Listener"/>
+  </listeners> 
+
+<test name="Firefox Browser">
+
+    <parameter name="browser"  value="IE"/>
+    <parameter name="StoreId"  value="55"/>
+	<classes>
+		<class name="groupSales.US591_BillableSalesDetailLandingPage"/>
+		<methods>
+			<include name="groupSales_US591_TC1303"/>
+		</methods>
+
+		
+	</classes>
+</test>
+
+</suite>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

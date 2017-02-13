@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="none">
+  <parameter name="StoreId" value="55"/>
+  <parameter name="browser" value="Chrome"/>
+  <listeners>
+    <listener class-name="common.Listener"/>
+  </listeners>
+  <test name="Firefox Browser(failed)" parallel="none">
+    <parameter name="StoreId" value="55"/>
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="groupSales.US591_BillableSalesDetailLandingPage">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="groupSales_US591_TC1303"/>
+          <include name="beforeMethod"/>
+          <include name="initializeTestData"/>
+        </methods>
+      </class> <!-- groupSales.US591_BillableSalesDetailLandingPage -->
+    </classes>
+  </test> <!-- Firefox Browser(failed) -->
+</suite> <!-- Failed suite [Suite] -->

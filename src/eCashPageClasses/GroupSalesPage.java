@@ -332,7 +332,7 @@ public class GroupSalesPage extends AbstractPage
 	@FindBy(xpath="(//table[@id='tax_exempt_table']/tbody/tr/td[text()='Validated'])[1]/following-sibling::td/eb-button")
 	public WebElement TextExemptSales_ValidatedRecord_Edit_BT;
 	
-	@FindBy(xpath="(//table[@id='billable_sales_table']/tbody/tr/td[text()='Validated'])[1]/following-sibling::td/eb-button")
+	@FindBy(xpath="(//table[@id='billable_sales_table']/tbody/tr/td[text()='Validated'])[1]/following-sibling::td/eb-button/button")
 	public WebElement BillableSales_ValidatedRecord_Edit_BT;
 	
 	@FindBy(xpath="(//table[@id='other_receipts_table']/tbody/tr/td[text()='Validated'])[1]/following-sibling::td/eb-button")

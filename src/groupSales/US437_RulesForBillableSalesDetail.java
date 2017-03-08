@@ -266,7 +266,9 @@ public class US437_RulesForBillableSalesDetail extends AbstractTest{
 					"Fail");
 			AbstractTest.takeSnapShot();
 		}
+		Thread.sleep(1500);
 		GenericMethods.clearValueOfElement(groupSalesPage.BillableSalesPopUp_PhoneNumber_TB,"BillableSalesPopUp_PhoneNumber_TB");
+		Thread.sleep(1500);
 		GenericMethods.enterValueInElement(groupSalesPage.BillableSalesPopUp_PhoneNumber_TB,"BillableSalesPopUp_PhoneNumber_TB", invalidPhoneNumber);
 		System.out.println("invalid phone "+groupSalesPage.BillableSalesPopUp_PhoneNumber_TB.getAttribute("value"));
 		if (groupSalesPage.BillableSalesPopUp_PhoneNumber_TB.getAttribute("value").replaceAll("[^a-zA-Z0-9]", "").length() == 0

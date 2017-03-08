@@ -2,6 +2,7 @@ package groupSales;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.text.ParseException;
 import java.util.List;
 
 import eCashPageClasses.AbstractTest;
@@ -17,6 +18,7 @@ import org.testng.annotations.Test;
 
 import common.Base;
 import common.GenericMethods;
+import common.GlobalVariable;
 import common.LoginTestData;
 import common.Reporter;
 import eCashPageClasses.GroupSalesPage;
@@ -29,12 +31,14 @@ public class US592_TaxExemptSalesLandingPage extends AbstractTest
 	
 	@Test()
 	public void groupSales_US592_TC3169() throws InterruptedException,
-			RowsExceededException, BiffException, WriteException, IOException {
+			RowsExceededException, BiffException, WriteException, IOException, ParseException {
 		/** Variable Section : **/
 		AbstractTest.tcName = "groupSales_US592_TC3169";
 		String password = LoginTestData.level1_SSO_Password;
 		String userId = LoginTestData.level1_SSO_UserId;
 		String storeId = LoginTestData.level1StoreId;
+		String startDate = GlobalVariable.startDate;
+		String endDate = GlobalVariable.endDate;
 		/***********************************/
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
 		GroupSalesPage groupSalesPage = PageFactory.initElements(driver, GroupSalesPage.class);
@@ -42,7 +46,22 @@ public class US592_TaxExemptSalesLandingPage extends AbstractTest
 		groupSalesPage = homePage.selectUserWithSSOLogin(userId, password).selectLocation(storeId)
 				.goToGroupSalesPage();
 		Thread.sleep(3000);
-		Select select =new Select(groupSalesPage.TextExempt_DateRange_DD);
+		Select select = new Select(groupSalesPage.TextExempt_DateRange_DD);
+		select.selectByVisibleText("Custom Date Range");
+		groupSalesPage.selectStartdate(startDate).selectEndDate(endDate).TaxExemptSales_ShowResults_BT.click();
+		Thread.sleep(3000);
+		if(groupSalesPage.verifyTaxExemptSalesDisplayedForSelectedDateRange(startDate, endDate)){
+			Reporter.reportPassResult(
+					browser,
+					"User should be able to view the records within custom date range in Tax exempt Sales Landing Page",
+					"Pass");
+		} else {
+			Reporter.reportTestFailure(
+					browser,
+					"User should be able to view the records within custom date range in Tax exempt Sales Landing Page",
+					"Fail");
+			AbstractTest.takeSnapShot();
+		}
 		select.selectByVisibleText("3 Months");
 		Thread.sleep(2000);
 		//click on Show Result button
@@ -56,6 +75,7 @@ public class US592_TaxExemptSalesLandingPage extends AbstractTest
 		System.out.println("Base.getCorrectMonthFromDate(startDate_01) "+Base.getCorrectMonthFromDate(startDate_01));
 		int day=(Base.getCorrectMonthFromDate(startDate_01))+3;
 		String month01=null;
+		String exp_endDate_01=null;
 		if(day>12)
 		{
 			day=day-12;
@@ -63,10 +83,21 @@ public class US592_TaxExemptSalesLandingPage extends AbstractTest
 			if(day<=9)
 			{
 				month01="0"+Integer.toString(day);
+				 exp_endDate_01=month01+"/"+arr1[1]+"/"+arr1[2];
+			}
+			else
+			{
+				month01=Integer.toString(day);
+				 exp_endDate_01=month01+"/"+arr1[1]+"/"+arr1[2];
 			}
 		}
+		else
+		{
+			month01="0"+Integer.toString(day);
+			 exp_endDate_01=month01+"/"+arr1[1]+"/"+arr1[2];
+		}
 		
-		String exp_endDate_01=month01+"/"+arr1[1]+"/"+arr1[2];
+		
 //		String exp_endDate_01=Integer.toString(day)+"/"+arr1[1]+"/"+arr1[2];
 		System.out.println("exp_endDate_01"+exp_endDate_01);
 		String endDate_01=groupSalesPage.TaxExempt_EndDate_TB.getAttribute("value");
@@ -149,8 +180,14 @@ public class US592_TaxExemptSalesLandingPage extends AbstractTest
 			}
 			else
 			{
-				exp_endDate_02=Integer.toString(day1)+"/"+arr2[1]+"/"+arr2[2];
+				month02=Integer.toString(day1);
+				exp_endDate_02=month02+"/"+arr2[1]+"/"+arr2[2];
 			}
+		}
+		else
+		{
+			month02="0"+Integer.toString(day1);
+			exp_endDate_02=month02+"/"+arr2[1]+"/"+arr2[2];
 		}
 		
 		System.out.println("exp_endDate_01"+exp_endDate_02);
@@ -235,8 +272,14 @@ public class US592_TaxExemptSalesLandingPage extends AbstractTest
 			}
 			else
 			{
-				exp_endDate_03=Integer.toString(day2)+"/"+arr3[1]+"/"+arr3[2];
+				month03=Integer.toString(day2);
+				exp_endDate_03=month03+"/"+arr3[1]+"/"+arr3[2];
 			}
+		}
+		else
+		{
+			month03="0"+Integer.toString(day2);
+			exp_endDate_03=month03+"/"+arr3[1]+"/"+arr3[2];
 		}
 		
 		
@@ -307,23 +350,24 @@ public class US592_TaxExemptSalesLandingPage extends AbstractTest
 		String arr4[]=startDate_04.split("/");
 		System.out.println("Base.getCorrectMonthFromDate(startDate_01) "+Base.getCorrectMonthFromDate(startDate_04));
 		int day3=(Base.getCorrectMonthFromDate(startDate_04));
+		System.out.println("day3 "+day3);
 		String exp_endDate_04=null;
 		String month04=null;
-		if(day3>12)
-		{
-			day=day-12;
+		
 			arr4[2]=Integer.toString(Integer.parseInt(arr4[2])+1);
 			if(day3<=9)
 			{
 				month04="0"+Integer.toString(day3);
-			
-			exp_endDate_04=month04+"/"+arr4[1]+"/"+arr4[2];
-		}
-		else
-		{
-			exp_endDate_04=Integer.toString(day3)+"/"+arr4[1]+"/"+arr4[2];
-		}
-		}
+
+				exp_endDate_04=month04+"/"+arr4[1]+"/"+arr4[2];
+			}
+				else
+			{
+					month04=Integer.toString(day3);
+					exp_endDate_04=month04+"/"+arr4[1]+"/"+arr4[2];
+			}
+		
+	
 		
 		System.out.println("exp_endDate_01"+exp_endDate_04);
 		String endDate_04=groupSalesPage.TaxExempt_EndDate_TB.getAttribute("value");
@@ -369,19 +413,18 @@ public class US592_TaxExemptSalesLandingPage extends AbstractTest
 		{
 			Reporter.reportPassResult(
 					browser,
-					"User should be able to view Start Date and End Date is updated for selected Date range says 270 days",
+					"User should be able to view Start Date and End Date is updated for selected Date range says 360 days",
 					"Pass");
 		}
 		else
 		{
 			Reporter.reportTestFailure(
 					browser,
-					"User should be able to view Start Date and End Date is updated for selected Date range says 270 days",
+					"User should be able to view Start Date and End Date is updated for selected Date range says 360 days",
 					"Fail");
 			AbstractTest.takeSnapShot();
 		}
-		
-		
+			
 		
 	}
 	
@@ -437,7 +480,8 @@ public class US592_TaxExemptSalesLandingPage extends AbstractTest
 	     expTotalAmount= "$"+String.valueOf(bd);
 		
 		System.out.println("expTotalAmount "+expTotalAmount);
-		String actamount=groupSalesPage.Total_Value.getText();
+		String actamount=groupSalesPage.Total_Value.getText().replace(",", "");
+		System.out.println("actamount "+actamount);
 		if(actamount.equalsIgnoreCase(expTotalAmount))
 		{
 			Reporter.reportPassResult(
@@ -489,7 +533,9 @@ public class US592_TaxExemptSalesLandingPage extends AbstractTest
 	     expTotalAmount_01= "$"+String.valueOf(bd1);
 		
 		System.out.println("expTotalAmount_01 "+expTotalAmount_01);
-		if(groupSalesPage.Total_Value.getText().equalsIgnoreCase(expTotalAmount_01))
+		System.out.println("actamount_01 "+groupSalesPage.Total_Value.getText());
+
+		if(groupSalesPage.Total_Value.getText().replace(",", "").equalsIgnoreCase(expTotalAmount_01))
 		{
 			Reporter.reportPassResult(
 					browser,
@@ -541,7 +587,8 @@ public class US592_TaxExemptSalesLandingPage extends AbstractTest
 	     expTotalAmount_02= "$"+String.valueOf(bd2);
 		
 		System.out.println("expTotalAmount_02 "+expTotalAmount_02);
-		if(groupSalesPage.Total_Value.getText().equalsIgnoreCase(expTotalAmount_02))
+		System.out.println("actamount_02 "+groupSalesPage.Total_Value.getText());
+		if(groupSalesPage.Total_Value.getText().replace(",", "").equalsIgnoreCase(expTotalAmount_02))
 		{
 			Reporter.reportPassResult(
 					browser,
@@ -597,7 +644,8 @@ public class US592_TaxExemptSalesLandingPage extends AbstractTest
 	      expTotalAmount_03= "$"+String.valueOf(bd3);
 		
 		System.out.println("expTotalAmount_03 "+expTotalAmount_03);
-		if(groupSalesPage.Total_Value.getText().equalsIgnoreCase(expTotalAmount_03))
+		System.out.println("actamount_03 "+groupSalesPage.Total_Value.getText());
+		if(groupSalesPage.Total_Value.getText().replace(",", "").equalsIgnoreCase(expTotalAmount_03))
 		{
 			Reporter.reportPassResult(
 					browser,

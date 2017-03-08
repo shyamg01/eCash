@@ -62,6 +62,7 @@ public class US593_OtherReceiptsDetailLandingPage extends AbstractTest
 		System.out.println("Base.getMonthFromDate(startDate_01) "+Base.getCorrectMonthFromDate(startDate_01));
 		int day=(Base.getCorrectMonthFromDate(startDate_01))+3;
 		String month01=null;
+		String exp_endDate_01=null;
 		if(day>12)
 		{
 			day=day-12;
@@ -69,10 +70,19 @@ public class US593_OtherReceiptsDetailLandingPage extends AbstractTest
 			if(day<=9)
 			{
 				month01="0"+Integer.toString(day);
+				 exp_endDate_01=month01+"/"+arr1[1]+"/"+arr1[2];
+			}
+			else
+			{
+				month01=Integer.toString(day);
+				 exp_endDate_01=month01+"/"+arr1[1]+"/"+arr1[2];
 			}
 		}
-		
-		String exp_endDate_01=month01+"/"+arr1[1]+"/"+arr1[2];
+		else
+		{
+			month01="0"+Integer.toString(day);
+			 exp_endDate_01=month01+"/"+arr1[1]+"/"+arr1[2];
+		}
 //		String exp_endDate_01=Integer.toString(day)+"/"+arr1[1]+"/"+arr1[2];
 		System.out.println("exp_endDate_01"+exp_endDate_01);
 		String endDate_01=groupSalesPage.OtherReceipts_EndDate_TB.getAttribute("value");
@@ -89,7 +99,7 @@ public class US593_OtherReceiptsDetailLandingPage extends AbstractTest
 			String[] a=(element.get(i).getText()).split("/");
 			System.out.println("a[0] "+a[0]);
 			int actmonth=Integer.parseInt(a[0]);
-			int expmonth=Base.getCorrectMonthFromDate(startDate_01);
+			int expmonth=Integer.parseInt(month01);
 			System.out.println("actmonth"+actmonth);
 			System.out.println("expmonth"+expmonth);
 			if(actmonth==(expmonth) || actmonth==(expmonth+1) || actmonth==(expmonth+2) || actmonth==(expmonth+3) && i==numberOfElement-1)
@@ -144,16 +154,27 @@ public class US593_OtherReceiptsDetailLandingPage extends AbstractTest
 		int day1=(Base.getCorrectMonthFromDate(startDate_02))+6;
 		String exp_endDate_02=null;
 		String month02=null;
-		if(day>12)
+		if(day1>12)
 		{
-			day=day-12;
-			arr1[2]=Integer.toString(Integer.parseInt(arr1[2])+1);
-			if(day<=9)
+			day1=day1-12;
+			arr2[2]=Integer.toString(Integer.parseInt(arr2[2])+1);
+			if(day1<=9)
 			{
-				month02="0"+Integer.toString(day);
+				month02="0"+Integer.toString(day1);
+				exp_endDate_02=month02+"/"+arr2[1]+"/"+arr2[2];
+			}
+			else
+			{
+				month02=Integer.toString(day1);
+				exp_endDate_02=month02+"/"+arr2[1]+"/"+arr2[2];
 			}
 		}
-		 exp_endDate_02=month01+"/"+arr1[1]+"/"+arr1[2];
+		else
+		{
+			month02="0"+Integer.toString(day1);
+			exp_endDate_02=month02+"/"+arr2[1]+"/"+arr2[2];
+		}
+		
 		System.out.println("exp_endDate_01"+exp_endDate_02);
 		String endDate_02=groupSalesPage.OtherReceipts_EndDate_TB.getAttribute("value");
 		System.out.println("endDate_01"+endDate_02);
@@ -169,7 +190,7 @@ public class US593_OtherReceiptsDetailLandingPage extends AbstractTest
 			String[] a=(element1.get(i).getText()).split("/");
 			System.out.println("a[0] "+a[0]);
 			int actmonth=Integer.parseInt(a[0]);
-			int expmonth=Base.getCorrectMonthFromDate(startDate_02);
+			int expmonth=Integer.parseInt(month02);
 			System.out.println("actmonth"+actmonth);
 			System.out.println("expmonth"+expmonth);
 			if(actmonth==(expmonth) || actmonth==(expmonth+1) || actmonth==(expmonth+2) || actmonth==(expmonth+3) || actmonth==(expmonth+2) || actmonth==(expmonth+4) || actmonth==(expmonth+2) || actmonth==(expmonth+5) || actmonth==(expmonth+2) || actmonth==(expmonth+6) && i==numberOfElement-1)
@@ -225,16 +246,27 @@ public class US593_OtherReceiptsDetailLandingPage extends AbstractTest
 		int day2=(Base.getCorrectMonthFromDate(startDate_03))+9;
 		String exp_endDate_03=null;
 		String month03=null;
-		if(day>12)
+		if(day2>12)
 		{
-			day=day-12;
-			arr1[2]=Integer.toString(Integer.parseInt(arr1[2])+1);
-			if(day<=9)
+			day2=day2-12;
+			arr3[2]=Integer.toString(Integer.parseInt(arr3[2])+1);
+			if(day2<=9)
 			{
-				month03="0"+Integer.toString(day);
+				month03="0"+Integer.toString(day2);
+				exp_endDate_03=month03+"/"+arr3[1]+"/"+arr3[2];
+			}
+			else
+			{
+				month03=Integer.toString(day2);
+				exp_endDate_03=month03+"/"+arr3[1]+"/"+arr3[2];
 			}
 		}
-		exp_endDate_03=month01+"/"+arr1[1]+"/"+arr1[2];
+		else
+		{
+			month03="0"+Integer.toString(day2);
+			exp_endDate_03=month03+"/"+arr3[1]+"/"+arr3[2];
+		}
+		
 		System.out.println("exp_endDate_01"+exp_endDate_03);
 		String endDate_03=groupSalesPage.OtherReceipts_EndDate_TB.getAttribute("value");
 		System.out.println("endDate_01"+endDate_03);
@@ -249,7 +281,7 @@ public class US593_OtherReceiptsDetailLandingPage extends AbstractTest
 			String[] a=(element2.get(i).getText()).split("/");
 			System.out.println("a[0] "+a[0]);
 			int actmonth=Integer.parseInt(a[0]);
-			int expmonth=Base.getCorrectMonthFromDate(startDate_03);
+			int expmonth=Integer.parseInt(month03);
 			System.out.println("actmonth"+actmonth);
 			System.out.println("expmonth"+expmonth);
 			if(actmonth==(expmonth) || actmonth==(expmonth+1) || actmonth==(expmonth+2) || actmonth==(expmonth+3) || actmonth==(expmonth+2) || actmonth==(expmonth+4) || actmonth==(expmonth+2) || actmonth==(expmonth+5) || actmonth==(expmonth+2) || actmonth==(expmonth+6) || actmonth==(expmonth+7) || actmonth==(expmonth+8) || actmonth==(expmonth+9) && i==numberOfElement-1)
@@ -304,16 +336,20 @@ public class US593_OtherReceiptsDetailLandingPage extends AbstractTest
 		int day3=(Base.getCorrectMonthFromDate(startDate_04));
 		String exp_endDate_04=null;
 		String month04=null;
-		if(day>12)
-		{
-			day=day-12;
-			arr1[2]=Integer.toString(Integer.parseInt(arr1[2])+1);
-			if(day<=9)
+		
+			arr4[2]=Integer.toString(Integer.parseInt(arr4[2])+1);
+			if(day3<=9)
 			{
-				month04="0"+Integer.toString(day);
+				month04="0"+Integer.toString(day3);
+
+				exp_endDate_04=month04+"/"+arr4[1]+"/"+arr4[2];
 			}
-		}
-		exp_endDate_04=month01+"/"+arr1[1]+"/"+arr1[2];
+				else
+			{
+					month04=Integer.toString(day3);
+					exp_endDate_04=month04+"/"+arr4[1]+"/"+arr4[2];
+			}
+		
 		System.out.println("exp_endDate_01"+exp_endDate_04);
 		String endDate_04=groupSalesPage.OtherReceipts_EndDate_TB.getAttribute("value");
 		System.out.println("endDate_01"+endDate_04);
@@ -328,7 +364,7 @@ public class US593_OtherReceiptsDetailLandingPage extends AbstractTest
 			String[] a=(element3.get(i).getText()).split("/");
 			System.out.println("a[0] "+a[0]);
 			int actmonth=Integer.parseInt(a[0]);
-			int expmonth=Base.getCorrectMonthFromDate(startDate_04);
+			int expmonth=Integer.parseInt(month04);
 			System.out.println("actmonth"+actmonth);
 			System.out.println("expmonth"+expmonth);
 			if(actmonth==(expmonth) || actmonth==(expmonth+1) || actmonth==(expmonth+2) || actmonth==(expmonth+3) && i==numberOfElement-1)
@@ -370,14 +406,9 @@ public class US593_OtherReceiptsDetailLandingPage extends AbstractTest
 			AbstractTest.takeSnapShot();
 		}
 		
-		
-		
 	}
 	
-	
-	
-	
-	//TC3175 : Verify that user is able to Sort by Other Receipt details on Other Receipt landing page.
+//TC3175 : Verify that user is able to Sort by Other Receipt details on Other Receipt landing page.
 	
 			@Test()
 			public void groupSales_US593_TC3175() throws InterruptedException,

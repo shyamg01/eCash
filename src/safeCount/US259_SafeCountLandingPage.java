@@ -73,7 +73,7 @@ public class US259_SafeCountLandingPage extends AbstractTest
 			RowsExceededException, BiffException, WriteException, IOException, ParseException {
 		/** Variable Section : **/
 		SafeCountPage safeCountPage;
-		AbstractTest.tcName="safeCount_US259_TC3639";
+		AbstractTest.tcName="safeCount_US259_TC3640";
 		String password = LoginTestData.level1_SSO_Password;
 		String userId = LoginTestData.level1_SSO_UserId;
 		String storeId = LoginTestData.level1StoreId;

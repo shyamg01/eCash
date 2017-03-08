@@ -15,6 +15,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Reporter;
 
+import common.Base;
 import common.GenericMethods;
 
 
@@ -177,13 +178,13 @@ public class HomePage extends AbstractPage
 		GenericMethods.enterValueInElement(SSOUserName_TB,"SSOUserName_TB", userName);
 		GenericMethods.enterValueInElement(SSOPassword_TB,"SSOPassword_TB", password);
 		GenericMethods.clickOnElement(SSOLogin_BT,"SSOLogin_BT");
-		/*if(Base.isElementDisplayed(By.xpath("//input[@id='ctl00_ContentPlaceHolder1_btnContinue2Regular' and @value='No']")))
-		{
-			driver.findElement(By.xpath("//input[@id='ctl00_ContentPlaceHolder1_btnContinue2Regular' and @value='No']")).click();
-		}*/
 		Thread.sleep(4000);
+		if(Base.isElementDisplayed(By.xpath("//input[@value='No']"))){
+			driver.findElement(By.xpath("//input[@value='No']")).click();
+		}
 		driver.switchTo().defaultContent();
 		wait.until(ExpectedConditions.visibilityOf(HomePage_Title));
+		Thread.sleep(5000);
 		Reporter.log("Successfully redirected to the Home Page");
 		return PageFactory.initElements(driver, HomePage.class);
 		

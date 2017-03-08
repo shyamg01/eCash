@@ -12,6 +12,7 @@ import jxl.write.WriteException;
 import jxl.write.biff.RowsExceededException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -79,9 +80,11 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 					"Fail");
 			AbstractTest.takeSnapShot();
 		}
-		
+		Base.scrollToTheElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+		Thread.sleep(2000);
 		//Click on edit button for first validated record
-		GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//		GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
 		wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 		//Edit all editable values in pop up and submit
 		System.out.println("orgName "+orgName);
@@ -104,7 +107,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 		Thread.sleep(1500);
 		AbstractPage.executor.executeScript("window.scrollBy(0,100)", "");
 		//Click on edit button for first validated record
-		GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//		GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
 		wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 		Select select = new Select(groupSalesPage.BillableSalesPopUp_State_DD);
 		//Verify that all values are updated
@@ -486,7 +490,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 		}
 		
 		//Click on edit button for first validated record
-		GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//		GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
 		wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 		//Edit all editable values in pop up and submit
 		System.out.println("orgName "+orgName);
@@ -509,7 +514,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 		Thread.sleep(1500);
 		AbstractPage.executor.executeScript("window.scrollBy(0,100)", "");
 		//Click on edit button for first validated record
-		GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//		GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
 		wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 		Select select = new Select(groupSalesPage.BillableSalesPopUp_State_DD);
 		//Verify that all values are updated
@@ -883,7 +889,9 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 			}
 			
 			//Click on edit button for first validated record
-			GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
+
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//			GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
 			wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 			//Edit all editable values in pop up and submit
 			System.out.println("orgName "+orgName);
@@ -906,7 +914,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 			Thread.sleep(1500);
 			AbstractPage.executor.executeScript("window.scrollBy(0,100)", "");
 			//Click on edit button for first validated record
-			GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//			GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
 			wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 			Select select = new Select(groupSalesPage.BillableSalesPopUp_State_DD);
 			//Verify that all values are updated
@@ -1281,7 +1290,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				}
 				
 				//Click on edit button for first validated record
-				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
 				wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 				//Edit all editable values in pop up and submit
 				System.out.println("orgName "+orgName);
@@ -1304,7 +1314,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				Thread.sleep(1500);
 				AbstractPage.executor.executeScript("window.scrollBy(0,100)", "");
 				//Click on edit button for first validated record
-				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
 				wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 				Select select = new Select(groupSalesPage.BillableSalesPopUp_State_DD);
 				//Verify that all values are updated
@@ -1677,7 +1688,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				}
 				
 				//Click on edit button for first validated record
-				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
 				wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 				//Edit all editable values in pop up and submit
 				System.out.println("orgName "+orgName);
@@ -1700,7 +1712,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				Thread.sleep(1500);
 				AbstractPage.executor.executeScript("window.scrollBy(0,100)", "");
 				//Click on edit button for first validated record
-				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
 				wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 				Select select = new Select(groupSalesPage.BillableSalesPopUp_State_DD);
 				//Verify that all values are updated
@@ -2072,7 +2085,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				}
 				
 				//Click on edit button for first validated record
-				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
 				wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 				//Edit all editable values in pop up and submit
 				System.out.println("orgName "+orgName);
@@ -2095,7 +2109,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				Thread.sleep(1500);
 				AbstractPage.executor.executeScript("window.scrollBy(0,100)", "");
 				//Click on edit button for first validated record
-				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
 				wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 				Select select = new Select(groupSalesPage.BillableSalesPopUp_State_DD);
 				//Verify that all values are updated
@@ -2467,7 +2482,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				}
 				
 				//Click on edit button for first validated record
-				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
 				wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 				//Edit all editable values in pop up and submit
 				System.out.println("orgName "+orgName);
@@ -2490,7 +2506,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				Thread.sleep(1500);
 				AbstractPage.executor.executeScript("window.scrollBy(0,100)", "");
 				//Click on edit button for first validated record
-				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
 				wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 				Select select = new Select(groupSalesPage.BillableSalesPopUp_State_DD);
 				//Verify that all values are updated
@@ -2864,7 +2881,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				}
 				
 				//Click on edit button for first validated record
-				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
 				wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 				//Edit all editable values in pop up and submit
 				System.out.println("orgName "+orgName);
@@ -2887,7 +2905,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				Thread.sleep(1500);
 				AbstractPage.executor.executeScript("window.scrollBy(0,100)", "");
 				//Click on edit button for first validated record
-				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
 				wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 				Select select = new Select(groupSalesPage.BillableSalesPopUp_State_DD);
 				//Verify that all values are updated
@@ -3260,7 +3279,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				}
 				
 				//Click on edit button for first validated record
-				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "groupSalesPage.BillableSales_ValidatedRecord_Edit_BT");
 				wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 				//Edit all editable values in pop up and submit
 				System.out.println("orgName "+orgName);
@@ -3283,7 +3303,8 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				Thread.sleep(1500);
 				AbstractPage.executor.executeScript("window.scrollBy(0,100)", "");
 				//Click on edit button for first validated record
-				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", groupSalesPage.BillableSales_ValidatedRecord_Edit_BT);
+//				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ValidatedRecord_Edit_BT, "Validated Record Edit Button");
 				wait.until(ExpectedConditions.visibilityOf(groupSalesPage.EditBillableSales_PopUp_Header));
 				Select select = new Select(groupSalesPage.BillableSalesPopUp_State_DD);
 				//Verify that all values are updated

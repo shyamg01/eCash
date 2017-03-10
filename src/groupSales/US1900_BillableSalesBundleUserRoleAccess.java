@@ -1102,6 +1102,7 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 			}
 			selectDate.selectByValue("3");
 			GenericMethods.clickOnElement(groupSalesPage.BillableSales_ShowResults_BT,"BillableSales_ShowResults_BT");
+			Thread.sleep(5000);
 			Calendar cal1 = Calendar.getInstance();
 			SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
 			cal1.setTime(new Date());
@@ -1138,6 +1139,7 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 			Thread.sleep(2000);
 			selectDate.selectByValue("6");
 			GenericMethods.clickOnElement(groupSalesPage.BillableSales_ShowResults_BT,"BillableSales_ShowResults_BT");
+			Thread.sleep(5000);
 			Calendar cal2 = Calendar.getInstance();
 			cal2.setTime(new Date());
 			selectedEndDate = dateFormat.format(cal2.getTime());
@@ -1171,6 +1173,7 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 			Thread.sleep(2000);
 			selectDate.selectByValue("9");
 			GenericMethods.clickOnElement(groupSalesPage.BillableSales_ShowResults_BT,"BillableSales_ShowResults_BT");
+			Thread.sleep(5000);
 			Calendar cal3 = Calendar.getInstance();
 			cal3.setTime(new Date());
 			selectedEndDate = dateFormat.format(cal3.getTime());
@@ -1203,6 +1206,7 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 			}
 			Thread.sleep(2000);
 			selectDate.selectByValue("12");
+			Thread.sleep(5000);
 			GenericMethods.clickOnElement(groupSalesPage.BillableSales_ShowResults_BT,"BillableSales_ShowResults_BT");
 			Calendar cal4 = Calendar.getInstance();
 			cal4.setTime(new Date());
@@ -1502,6 +1506,7 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				}
 				selectDate.selectByValue("3");
 				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ShowResults_BT,"BillableSales_ShowResults_BT");
+				Thread.sleep(5000);
 				Calendar cal1 = Calendar.getInstance();
 				SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
 				cal1.setTime(new Date());
@@ -1538,6 +1543,7 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				Thread.sleep(2000);
 				selectDate.selectByValue("6");
 				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ShowResults_BT,"BillableSales_ShowResults_BT");
+				Thread.sleep(5000);
 				Calendar cal2 = Calendar.getInstance();
 				cal2.setTime(new Date());
 				selectedEndDate = dateFormat.format(cal2.getTime());
@@ -1571,6 +1577,7 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				Thread.sleep(2000);
 				selectDate.selectByValue("9");
 				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ShowResults_BT,"BillableSales_ShowResults_BT");
+				Thread.sleep(5000);
 				Calendar cal3 = Calendar.getInstance();
 				cal3.setTime(new Date());
 				selectedEndDate = dateFormat.format(cal3.getTime());
@@ -1604,6 +1611,7 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				Thread.sleep(2000);
 				selectDate.selectByValue("12");
 				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ShowResults_BT,"BillableSales_ShowResults_BT");
+				Thread.sleep(5000);
 				Calendar cal4 = Calendar.getInstance();
 				cal4.setTime(new Date());
 				selectedEndDate = dateFormat.format(cal4.getTime());
@@ -1900,6 +1908,7 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				}
 				selectDate.selectByValue("3");
 				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ShowResults_BT,"BillableSales_ShowResults_BT");
+				Thread.sleep(5000);
 				Calendar cal1 = Calendar.getInstance();
 				SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
 				cal1.setTime(new Date());
@@ -1936,6 +1945,7 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				Thread.sleep(2000);
 				selectDate.selectByValue("6");
 				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ShowResults_BT,"BillableSales_ShowResults_BT");
+				Thread.sleep(5000);
 				Calendar cal2 = Calendar.getInstance();
 				cal2.setTime(new Date());
 				selectedEndDate = dateFormat.format(cal2.getTime());
@@ -2002,6 +2012,7 @@ public class US1900_BillableSalesBundleUserRoleAccess extends AbstractTest
 				Thread.sleep(2000);
 				selectDate.selectByValue("12");
 				GenericMethods.clickOnElement(groupSalesPage.BillableSales_ShowResults_BT,"BillableSales_ShowResults_BT");
+				Thread.sleep(5000);
 				Calendar cal4 = Calendar.getInstance();
 				cal4.setTime(new Date());
 				selectedEndDate = dateFormat.format(cal4.getTime());

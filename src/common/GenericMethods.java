@@ -65,8 +65,10 @@ public class GenericMethods extends AbstractTest
 	
 	public static void enterValueInElement(WebElement element,String elementName,String value) throws RowsExceededException, BiffException, WriteException, IOException
 	{
-
-			element.sendKeys(value);
+			for(int i=0;i<value.length();i++){
+				element.sendKeys(Character.toString(value.charAt(i)));
+			}
+			//element.sendKeys(value);
 			Reporter.reportPassResult(browser,value+" is successfully inserted in "+elementName, "Pass");
 //			Reporter.log("Step "+stepValue+": "+value+" is successfully inserted in "+elementName);
 			// AbstractTest.stepValue=AbstractTest.stepValue+1;

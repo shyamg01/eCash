@@ -230,7 +230,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 			AbstractTest.takeSnapShot();
 		}
 		
-		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
+		/*GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
 		Thread.sleep(2000);
 		boolean taxIdInAscendinOrder = groupSalesPage.verifyTextExemptSalesTaxIdInAscendingOrder();
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
@@ -249,7 +249,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 					"Fail");
 			AbstractTest.takeSnapShot();
 		}
-		
+		*/
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_DepositStatus_Label, "TextExemptSales_DepositStatus_Label");
 		Thread.sleep(2000);
 		boolean depositStatusInAscendinOrder = groupSalesPage.verifyTextExemptSalesDepositStatusInAscendingOrder();
@@ -611,7 +611,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 			AbstractTest.takeSnapShot();
 		}
 		
-		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
+	/*	GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
 		Thread.sleep(2000);
 		boolean taxIdInAscendinOrder = groupSalesPage.verifyTextExemptSalesTaxIdInAscendingOrder();
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
@@ -629,7 +629,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 					"user should be able to toggle between ascending and descending tax id value in Tax exempt Sales Landing Page",
 					"Fail");
 			AbstractTest.takeSnapShot();
-		}
+		}*/
 		
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_DepositStatus_Label, "TextExemptSales_DepositStatus_Label");
 		Thread.sleep(2000);
@@ -992,7 +992,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 			AbstractTest.takeSnapShot();
 		}
 		
-		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
+		/*GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
 		Thread.sleep(2000);
 		boolean taxIdInAscendinOrder = groupSalesPage.verifyTextExemptSalesTaxIdInAscendingOrder();
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
@@ -1010,7 +1010,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 					"user should be able to toggle between ascending and descending tax id value in Tax exempt Sales Landing Page",
 					"Fail");
 			AbstractTest.takeSnapShot();
-		}
+		}*/
 		
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_DepositStatus_Label, "TextExemptSales_DepositStatus_Label");
 		Thread.sleep(2000);
@@ -1373,7 +1373,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 			AbstractTest.takeSnapShot();
 		}
 		
-		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
+		/*GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
 		Thread.sleep(2000);
 		boolean taxIdInAscendinOrder = groupSalesPage.verifyTextExemptSalesTaxIdInAscendingOrder();
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
@@ -1391,7 +1391,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 					"user should be able to toggle between ascending and descending tax id value in Tax exempt Sales Landing Page",
 					"Fail");
 			AbstractTest.takeSnapShot();
-		}
+		}*/
 		
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_DepositStatus_Label, "TextExemptSales_DepositStatus_Label");
 		Thread.sleep(2000);
@@ -1754,7 +1754,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 			AbstractTest.takeSnapShot();
 		}
 		
-		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
+		/*GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
 		Thread.sleep(2000);
 		boolean taxIdInAscendinOrder = groupSalesPage.verifyTextExemptSalesTaxIdInAscendingOrder();
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
@@ -1772,7 +1772,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 					"user should be able to toggle between ascending and descending tax id value in Tax exempt Sales Landing Page",
 					"Fail");
 			AbstractTest.takeSnapShot();
-		}
+		}*/
 		
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_DepositStatus_Label, "TextExemptSales_DepositStatus_Label");
 		Thread.sleep(2000);
@@ -2135,7 +2135,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 			AbstractTest.takeSnapShot();
 		}
 		
-		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
+		/*GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
 		Thread.sleep(2000);
 		boolean taxIdInAscendinOrder = groupSalesPage.verifyTextExemptSalesTaxIdInAscendingOrder();
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
@@ -2154,7 +2154,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 					"Fail");
 			AbstractTest.takeSnapShot();
 		}
-		
+		*/
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_DepositStatus_Label, "TextExemptSales_DepositStatus_Label");
 		Thread.sleep(2000);
 		boolean depositStatusInAscendinOrder = groupSalesPage.verifyTextExemptSalesDepositStatusInAscendingOrder();
@@ -2516,7 +2516,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 			AbstractTest.takeSnapShot();
 		}
 		
-		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
+		/*GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
 		Thread.sleep(2000);
 		boolean taxIdInAscendinOrder = groupSalesPage.verifyTextExemptSalesTaxIdInAscendingOrder();
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
@@ -2534,7 +2534,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 					"user should be able to toggle between ascending and descending tax id value in Tax exempt Sales Landing Page",
 					"Fail");
 			AbstractTest.takeSnapShot();
-		}
+		}*/
 		
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_DepositStatus_Label, "TextExemptSales_DepositStatus_Label");
 		Thread.sleep(2000);
@@ -2897,7 +2897,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 			AbstractTest.takeSnapShot();
 		}
 		
-		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
+		/*GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
 		Thread.sleep(2000);
 		boolean taxIdInAscendinOrder = groupSalesPage.verifyTextExemptSalesTaxIdInAscendingOrder();
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
@@ -2915,7 +2915,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 					"user should be able to toggle between ascending and descending tax id value in Tax exempt Sales Landing Page",
 					"Fail");
 			AbstractTest.takeSnapShot();
-		}
+		}*/
 		
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_DepositStatus_Label, "TextExemptSales_DepositStatus_Label");
 		Thread.sleep(2000);
@@ -3278,7 +3278,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 			AbstractTest.takeSnapShot();
 		}
 		
-		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
+		/*GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
 		Thread.sleep(2000);
 		boolean taxIdInAscendinOrder = groupSalesPage.verifyTextExemptSalesTaxIdInAscendingOrder();
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
@@ -3296,7 +3296,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 					"user should be able to toggle between ascending and descending tax id value in Tax exempt Sales Landing Page",
 					"Fail");
 			AbstractTest.takeSnapShot();
-		}
+		}*/
 		
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_DepositStatus_Label, "TextExemptSales_DepositStatus_Label");
 		Thread.sleep(2000);
@@ -3627,7 +3627,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 			AbstractTest.takeSnapShot();
 		}
 		
-		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
+		/*GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
 		Thread.sleep(2000);
 		boolean taxIdInAscendinOrder = groupSalesPage.verifyTextExemptSalesTaxIdInAscendingOrder();
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_TaxIDNumber_Label, "TextExemptSales_TaxIDNumber_Label");
@@ -3645,7 +3645,7 @@ public class US1901_TaxExemptSalesBundleUserRoleAccess extends AbstractTest{
 					"user should be able to toggle between ascending and descending tax id value in Tax exempt Sales Landing Page",
 					"Fail");
 			AbstractTest.takeSnapShot();
-		}
+		}*/
 		
 		GenericMethods.clickOnElement(groupSalesPage.TextExemptSales_DepositStatus_Label, "TextExemptSales_DepositStatus_Label");
 		Thread.sleep(2000);

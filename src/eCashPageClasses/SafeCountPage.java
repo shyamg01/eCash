@@ -43,7 +43,7 @@ public class SafeCountPage extends AbstractPage {
 	@FindBy(xpath="//label[text()='Gift Certificate']")
 	public WebElement GiftCertificate_Label;
 	
-	@FindBy(xpath="//span[text()='Treat Book']")
+	@FindBy(xpath="//span[text()='Treat Books']")
 	public WebElement TreatBook_Label;
 	
 	@FindBy(xpath="//Label[text()='Created By']")
